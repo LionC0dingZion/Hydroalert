@@ -1,2 +1,38 @@
-# Hydroalert
-Hydroalert ist ein Prototyp, der im schulischen Rahmen entwickelt wurde. Unser Fokus liegt auf der Prävention von Überschwemmungen in ressourcenarmen Gebieten. Durch frühzeitige Warnungen und Maßnahmen möchten wir Gemeinschaften vor den Folgen von Hochwasser schützen und ihre Resilienz stärken
+# Hydroalert - Umweltüberwachung mit Raspberry Pi und Flask
+
+Hydroalert ist ein Schulprojekt, das Umweltparameter in Echtzeit überwacht. Es verwendet einen Raspberry Pi, um Daten von Sensoren zu lesen und über eine Webanwendung darzustellen.
+
+## Funktionen
+
+- Echtzeitüberwachung von Temperatur, Luftfeuchtigkeit und Abstand
+- Webanwendung zur Anzeige der Daten
+- Alarmfunktion bei kritischen Bedingungen
+
+
+## Fritzing Diagramm
+
+![alertv_Steckplatine](https://github.com/LionC0dingZion/Hydroalert/assets/142108023/0cc95e36-192a-4df1-b95e-0f55184f3f83)
+
+## Hauptkomponenten
+
+- **Raspberry Pi:** Steuert den Datenfluss und betreibt den Webserver.
+- **DHT11 Sensor:** Misst Temperatur und Luftfeuchtigkeit.
+- **HC-SR04 Ultraschallsensor:** Ermöglicht die Abstandsmessung.
+- **Buzzer:** Löst einen Alarm aus.
+- **Character LCD Display:** Zeigt wichtige Informationen an.
+
+## Webanwendung mit Flask
+
+Die Webanwendung wird mit Flask, einem Python-Webframework, betrieben. Sie visualisiert die Daten in Echtzeit und ermöglicht Benutzern, den Zustand zu überwachen.
+
+## Anwendung starten
+
+1. Führen Sie `python alarm.py` aus, um den Alarm scharf zu stellen .
+2. Führen Sie `python app.py` aus, um den Webserver zu starten.
+3.    
+
+## Projektnutzen
+
+Hydroalert demonstriert den praktischen Einsatz von Technologie in der Umweltüberwachung und fördert das Verständnis für Umweltbedingungen.
+
+*Hinweis: Dieses Projekt wird im Rahmen eines schulischen Bildungsprogramms entwickelt und hat keinen kommerziellen Hintergrund.*
