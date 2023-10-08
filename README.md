@@ -1,4 +1,4 @@
-# Hydroalert - Umweltüberwachung mit Raspberry Pi und Flask
+## Hydroalert - Schulprojekt ITECH BS14: Kostenbewusste Überflutungserkennung mit Hitzewarnsystem für Entwicklungsländer"
 
 Hydroalert ist ein Schulprojekt, das Umweltparameter in Echtzeit überwacht. Es verwendet einen Raspberry Pi, um Daten von Sensoren zu lesen und über eine Webanwendung darzustellen.
 
