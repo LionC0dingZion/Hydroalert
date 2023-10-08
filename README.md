@@ -2,7 +2,7 @@
 
 Hydroalert ist ein Schulprojekt, das Umweltparameter in Echtzeit überwacht. Es verwendet einen Raspberry Pi, um Daten von Sensoren zu lesen und über eine Webanwendung darzustellen.
 
-## Funktionen
+## Funktionen!
 
 - Echtzeitüberwachung von Temperatur, Luftfeuchtigkeit und Abstand
 - Webanwendung zur Anzeige der Daten
@@ -10,8 +10,8 @@ Hydroalert ist ein Schulprojekt, das Umweltparameter in Echtzeit überwacht. Es 
 
 
 ## Fritzing Diagramm
+![alert_Steckplatine](https://github.com/LionC0dingZion/Hydroalert/assets/142108023/76ee24a7-649d-46c5-b2c4-da05c60d8e99)
 
-![alertv_Steckplatine](https://github.com/LionC0dingZion/Hydroalert/assets/142108023/0cc95e36-192a-4df1-b95e-0f55184f3f83)
 
 ## Hauptkomponenten
 
