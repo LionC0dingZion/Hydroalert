@@ -17,9 +17,9 @@ Hydroalert ist ein Schulprojekt, das Umweltparameter in Echtzeit überwacht. Es 
 
 - **Raspberry Pi:** Steuert den Datenfluss und betreibt den Webserver.
 - **DHT11 Sensor:** Misst Temperatur und Luftfeuchtigkeit.
-- **HC-SR04 Ultraschallsensor:** Ermöglicht die Abstandsmessung.
+- **HC-SR04 Ultraschallsensor:** Ermöglicht die Abstandsmessung zum Wasser.
 - **Buzzer:** Löst einen Alarm aus.
-- **Character LCD Display:** Zeigt wichtige Informationen an.
+- **Character-LCD-Anzeige:** Zeigt die aktuelle Temperatur und Luftfeuchtigkeit an. Im Falle eines ausgelösten Alarms zeigt das Display zudem eine entsprechende Warnung an.
 
 ## Webanwendung mit Flask
 
