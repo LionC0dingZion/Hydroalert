@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydro Alert</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Hydro Alert</h1>
+
+    <div>
+        <canvas id="temperatureChart"></canvas>
+    </div>
+
+    <div>
+        <canvas id="humidityChart"></canvas>
+    </div>
+
+    <div>
+        <canvas id="distanceChart"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('connect', function() {
+            console.log('Mit dem Server verbunden');
+        });
+
+        socket.on('sensor_data', function(data) {
+            console.log('Daten empfangen:', data);
+
+            var timestamps = data.map(item => new Date(item[0] * 1000).toLocaleTimeString());
+            var temperatures = data.map(item => item[1]);
+            var humidities = data.map(item => item[2]);
+            var distances = data.map(item => item[3]);
+
+            var tempCtx = document.getElementById('temperatureChart').getContext('2d');
+            var tempChart = new Chart(tempCtx, {
+                type: 'line',
+                data: {
+                    labels: timestamps,
+                    datasets: [{
+                        label: 'Temperatur (°C)',
+                        data: temperatures,
+                        borderColor: 'red',
+                        fill: false
+                    }]
+                },
+            });
+
+            var humCtx = document.getElementById('humidityChart').getContext('2d');
+            var humChart = new Chart(humCtx, {
+                type: 'line',
+                data: {
+                    labels: timestamps,
+                    datasets: [{
+                        label: 'Luftfeuchtigkeit (%)',
+                        data: humidities,
+                        borderColor: 'blue',
+                        fill: false
+                    }]
+                },
+            });
+
+            var distCtx = document.getElementById('distanceChart').getContext('2d');
+            var distChart = new Chart(distCtx, {
+                type: 'line',
+                data: {
+                    labels: timestamps,
+                    datasets: [{
+                        label: 'Abstand (cm)',
+                        data: distances,
+                        borderColor: 'green',
+                        fill: false
+                    }]
+                },
+            });
+        });
+    </script>
+</body>
+</html>
